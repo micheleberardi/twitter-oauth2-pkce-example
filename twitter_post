@@ -1,0 +1,28 @@
+import requests
+
+# Your access token
+access_token = 'TOKEN'  # Replace with your actual access token
+
+# The tweet text you want to post
+tweet_text = "Hello World! This is a tweet from my app."
+
+# Function to post a tweet using the access token
+def post_tweet(text, access_token):
+    tweet_url = "https://api.twitter.com/2/tweets"
+    headers = {
+        "Authorization": f"Bearer {access_token}",
+        "Content-Type": "application/json"
+    }
+    payload = {
+        "text": text
+    }
+    response = requests.post(tweet_url, headers=headers, json=payload)
+    if response.status_code == 201:
+        print("Successfully posted the tweet")
+        return response.json()
+    else:
+        print(f"Tweet creation failed: {response.text}")
+        raise Exception(f"Tweet creation failed with status code {response.status_code}")
+
+# Post the tweet
+post_tweet(tweet_text, access_token)
