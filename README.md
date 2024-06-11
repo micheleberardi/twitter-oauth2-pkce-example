@@ -1,5 +1,5 @@
 
-```markdown
+
 # Twitter OAuth 2.0 with PKCE Example
 
 This repository provides a complete example of how to implement OAuth 2.0 with PKCE for posting tweets using the Twitter API v2 in Python.
