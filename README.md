@@ -1,4 +1,3 @@
-Ecco un esempio di `README.md` che include i passaggi per configurare l'applicazione nel Twitter Developer Portal e una descrizione di cosa fanno gli script.
 
 ```markdown
 # Twitter OAuth 2.0 with PKCE Example
